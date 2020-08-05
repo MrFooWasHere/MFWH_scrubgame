@@ -39,4 +39,11 @@ grenade_grav	= 0.1;		// ;;
 
 // ********** HEALTH ETC **********
 player_health	= 4;		// player health
+gun_damage		= 0;		// flags for gun upgrades 0-1-2
+gun_boost		= false;	// flag for gun boost upgrade
+hover_upgrade	= false;	// flag for hover upgrade
+teleport_upgrade= false;	// flag for teleport upgrade
+hover_timer		= 30;		// time to spend hovering
+_hover_timer	= hover_timer; // actuall variable for hvoering
+
 camera = instance_create_depth(x,y,depth,oCamera); // Initialise the camera

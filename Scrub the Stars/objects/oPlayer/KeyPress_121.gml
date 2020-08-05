@@ -6,4 +6,10 @@ switch(get_string("Dev Command", "")){
 	case "restart":
 		game_restart();
 		break;
+	case "starman":
+		hover_upgrade = true;
+		break;
+	case "rocketjump":
+		gun_boost = true;
+		break;
 }
