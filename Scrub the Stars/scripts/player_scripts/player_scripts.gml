@@ -23,3 +23,84 @@ function player_jump(_power){
 	v_yspeed -= jumpPower*_power;
 	v_coyote = 0;	
 }
+
+function player_warp(_x, _y){
+	show_message("warp");
+	var northTime = 0;
+	var eastTime = 0;
+	var southTime = 0;
+	var westTime = 0;
+	
+	var breakTime = 0;
+	
+	// probe along the X, get a new location and a time
+	
+	// probing east
+	while ( place_meeting(_x + eastTime, _y, oSolid) ) {
+		eastTime ++;
+		if ((breakTime++) >= 30) {
+			eastTime = -1;
+			break;
+		}
+	}
+	
+	// probing west
+	breakTime = 0;
+	while ( place_meeting(_x - westTime, _y, oSolid) ) {
+		westTime ++;
+		if ((breakTime++) >= 30) {
+			westTime = -1;
+			break;
+		}
+	}
+	
+	// probe along the Y, get a new location and a time
+	breakTime = 0;
+	while ( place_meeting(_x, _y + southTime, oSolid) ) {
+		southTime ++;
+		if ((breakTime++) >= 30) {
+			southTime = -1;
+			break;
+		}
+	}
+	breakTime = 0;
+	while ( place_meeting(_x, _y - northTime, oSolid) ) {
+		northTime ++;
+		if ((breakTime++) >= 30) {
+			northTime = -1;
+			break;
+		}
+	}
+	
+	// check for invalid warp
+	if (eastTime + westTime + southTime + northTime == -4){
+		// invalid warp
+		exit;
+	} else{
+		show_message("goodwarp");
+		// compare times, pick shortest time.
+		var newX = 0;
+		var newY = -northTime;
+		var shortestTime = northTime;
+		
+		if eastTime < shortestTime{
+			shortestTime = eastTime;
+			newX = eastTime;
+			newY = 0;
+		}
+		if southTime < shortestTime{
+			shortestTime = southTime;
+			newX = 0;
+			newY = southTime;
+		}
+		if westTime < shortestTime{
+			newX = -westTime;
+			newY = 0;
+		}
+	
+		// set new X and Y
+		x = _x+newX;
+		y = _y+newY;
+	}
+	
+}

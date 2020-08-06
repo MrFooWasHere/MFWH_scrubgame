@@ -94,6 +94,11 @@ if yDist > 15 then newY = y; // too far, default back to regular y value
 
 #endregion
 
+
+// ********** UPDATE POSITION **********
+x = newX;
+y = newY;
+
 #region ********** SHOOTING CODE **********
 if inputShoot{
 	if !onGround && inputDown && gun_boost then{
@@ -112,21 +117,23 @@ if inputShoot then{
 	player_shoot();
 }
 
-if inputGrenade && (v_grenades > 0) then{
-	// chuck a grenade	
-	var grenade = instance_create_depth(x,y-25, depth+1, oGrenade_player);
-	grenade.xspd = grenade_xspeed * image_xscale + v_xspeed;
-	grenade.grav = grenade_grav;
-	grenade.yspd = grenade_yspeed;
-	
-	v_grenades --;
+if inputGrenade 
+{
+	if inputDown && instance_exists(oGrenade_player) && teleport_upgrade{
+			// teleport to the grenade
+			player_warp(oGrenade_player.x, oGrenade_player.y);
+	}
+	if (v_grenades > 0) && !instance_exists(oGrenade_player) {
+		// chuck a grenade	
+		var grenade = instance_create_depth(x,y-25, depth+1, oGrenade_player);
+		grenade.xspd = grenade_xspeed * image_xscale + v_xspeed;
+		grenade.grav = grenade_grav;
+		grenade.yspd = grenade_yspeed;
+		v_grenades --;
+	}
 }
 
 #endregion
-
-// ********** UPDATE POSITION **********
-x = newX;
-y = newY;
 
 #region ********** DAMAGE COLLISSIONS **********
 
