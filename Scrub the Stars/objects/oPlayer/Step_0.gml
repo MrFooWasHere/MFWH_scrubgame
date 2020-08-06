@@ -61,6 +61,22 @@ if inputJump && (onGround || v_coyote > 0) then {
 
 #endregion
 
+#region ********** SHOOTING CODE **********
+if inputShoot{
+	if !onGround && inputDown && gun_boost then{
+		// do a gun boost
+		if instance_number(oBullet_player) < 3 then{
+			v_yspeed = 0;
+			player_jump(0.75);
+		}
+		// TODO ADD A FLAG THAT CHANGES THE SPRITE HERE
+	} else{
+		player_shoot();	
+	}
+}
+
+#endregion
+
 #region ********** COLLISSION CHECKING **********
 // check new x position
 var newX	= x+v_xspeed;	  // spot to check
@@ -94,34 +110,33 @@ if yDist > 15 then newY = y; // too far, default back to regular y value
 
 #endregion
 
-
 // ********** UPDATE POSITION **********
 x = newX;
 y = newY;
 
-#region ********** SHOOTING CODE **********
-if inputShoot{
-	if !onGround && inputDown && gun_boost then{
-		// do a gun boost
-		if instance_number(oBullet_player) < 3 then{
-			v_yspeed = 0;
-			player_jump(0.75);
-		}
-		// TODO ADD A FLAG THAT CHANGES THE SPRITE HERE
-	} else{
-		player_shoot();	
+#region ********** DUCKING **********
+
+if inputDown {
+	if moveInput = 0 && onGround then{
+		// Duck
+		mask_index = s_pDuckMask;
 	}
+} else{
+	mask_index = s_pMask;	
 }
 
-if inputShoot then{
-	player_shoot();
-}
+#endregion
+
+#region ********** GRENADE CODE **********
 
 if inputGrenade 
 {
-	if inputDown && instance_exists(oGrenade_player) && teleport_upgrade{
-			// teleport to the grenade
-			player_warp(oGrenade_player.x, oGrenade_player.y);
+	if instance_exists(oGrenade_player){
+		if inputDown && teleport_upgrade{
+			player_warp(oGrenade_player.x, oGrenade_player.y); // teleport to the grenade
+		} else{
+			with oGrenade_player timer = 0;	 // premature detonate
+		}
 	}
 	if (v_grenades > 0) && !instance_exists(oGrenade_player) {
 		// chuck a grenade	

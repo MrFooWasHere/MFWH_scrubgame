@@ -21,3 +21,10 @@ if place_meeting(x,y+yspd,oSolid){
 
 x += xspd;
 y += yspd;
+
+timer --;
+
+if timer <= 0 {
+	// explode time
+	instance_destroy();
+}
