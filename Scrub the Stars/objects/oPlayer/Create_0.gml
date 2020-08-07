@@ -3,15 +3,15 @@
 //TODO Make these definable from an INI File
 // ********** KEYBINDINGS **********
 
-keyLeft			= vk_left;
-keyRight		= vk_right;
-keyDown			= vk_down;
-keyShoot		= ord("X");
-keyJump			= ord("Z");
-keyGrenade		= ord("C");
+keyLeft			= global.keybind_left;
+keyRight		= global.keybind_right;
+keyDown			= global.keybind_down;
+keyShoot		= global.keybind_shoot;
+keyJump			= global.keybind_jump;
+keyGrenade		= global.keybind_grenade;
 
-keyPause		= vk_escape;
-keyAccept		= vk_enter;
+keyPause		= global.keybind_pause;
+keyAccept		= global.keybind_accept;
 
 // ********** MOVEMENT VALUES **********
 
