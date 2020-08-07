@@ -2,7 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function damage_player(){
 	player_health --;
-	
+	invincible = 30;
+	v_xspeed = 0;
 	// ********** GAME OVER **********
 	if player_health <= 0 then {
 		game_restart();
@@ -32,7 +33,6 @@ function player_jump(_power){
 }
 
 function player_warp(_x, _y){
-	show_message("warp");
 	var northTime = 0;
 	var eastTime = 0;
 	var southTime = 0;
@@ -84,7 +84,6 @@ function player_warp(_x, _y){
 		// invalid warp
 		exit;
 	} else{
-		show_message("goodwarp");
 		// compare times, pick shortest time.
 		var newX = 0;
 		var newY = -northTime;

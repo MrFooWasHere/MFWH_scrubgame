@@ -15,4 +15,8 @@ switch(get_string("Dev Command", "")){
 	case "foo_whoneedslegs":
 		teleport_upgrade = !teleport_upgrade;
 		break;
+	case "dnstuff":
+		hover_upgrade = true;
+		gun_boost = true;
+		teleport_upgrade = true;
 }

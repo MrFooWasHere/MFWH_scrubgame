@@ -89,5 +89,6 @@ if keyboard_check_pressed(mapaccept){
 	ship.enter = false;
 	
 	// transition to the level
+	// TODO Fill this in with actual levels based on the exit
 	trans_primitive(testRoom,TR_PRIMITIVE_RECT,c_pOrange);
 }

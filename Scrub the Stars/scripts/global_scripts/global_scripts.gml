@@ -84,4 +84,8 @@ function setExit(mapenum){
 		}
 }
 	
+function saveGame(_saveslot){
+		
+}
+	
 #macro c_pOrange make_color_rgb(255,74,0)

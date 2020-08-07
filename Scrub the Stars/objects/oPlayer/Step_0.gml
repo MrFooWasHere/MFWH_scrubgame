@@ -29,6 +29,7 @@ switch moveInput {
 		image_xscale = -1; // flip the sprite
 		break;
 }
+
 #endregion
 
 #region ********** LONGITUDE CODE **********
@@ -85,6 +86,7 @@ if inputShoot{
 #endregion
 
 #region ********** COLLISSION CHECKING **********
+
 // check new x position
 var newX	= x+v_xspeed;	  // spot to check
 var newXdir = sign(v_xspeed); // direction we're going (INDEPENDANT FROM moveInput)
@@ -93,7 +95,7 @@ var checkStop = 0;
 while (place_meeting(newX,y,oSolid)){
 	newX -= newXdir; // move the newX location back in the newXdir
 	v_xspeed = 0; // stop moving when you hit the wall
-	if ((checkStop ++) >= 50) then break; // Stop the while loop if we get stuck completely
+	if ((checkStop ++) >= 80) then break; // Stop the while loop if we get stuck completely
 }
 
 // check if we are further than expected from our old position
@@ -118,6 +120,7 @@ if yDist > 15 then newY = y; // too far, default back to regular y value
 #endregion
 
 // ********** UPDATE POSITION **********
+
 x = newX;
 y = newY;
 
@@ -154,8 +157,14 @@ if inputGrenade
 
 #region ********** DAMAGE COLLISSIONS **********
 
-if place_meeting(x,y,oDamage) then{
+if place_meeting(x,y,oDamage) && invincible = 0 then{
 	damage_player();	
+}
+if invincible > 0 then {
+	invincible --;
+	if image_alpha > 0.4 then image_alpha -= 0.2 else image_alpha = 1;
+} else{
+	image_alpha = 1;	
 }
 
 #endregion
@@ -195,7 +204,7 @@ if spriteLock > 0 then spriteLock -- else
 				else sprite_index = s_pIdle;
 			}
 	} else{
-		sprite_index = s_pJump;	
+		if v_yspeed < 0 || v_yspeed > 2 then sprite_index = s_pJump;	
 	}
 }
 
