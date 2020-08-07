@@ -9,13 +9,20 @@ function damage_player(){
 	}
 }
 
-function player_shoot(){
+function player_shoot(_down){
 	var bulletCount = instance_number(oBullet_player); // number of bullets on screen
-	
+	var y_offset = 19;
+	if sprite_index = s_pDuck then y_offset = 14;
 	if maxBullets > bulletCount then{ // if we can fit more buillets on screen
-		var shot = instance_create_depth(x,y-19,depth+1,oBullet_player);
+		var shot = instance_create_depth(x,y-y_offset,depth+1,oBullet_player);
 		shot.image_xscale = image_xscale; // make the bullet face the right direction
-		shot.hspeed = bulletSpeed * image_xscale; // send the bullet off in the right direction	
+		
+		if _down {
+			shot.vspeed = bulletSpeed;
+			shot.image_angle = 90;
+		} else{
+			shot.hspeed = bulletSpeed * image_xscale; // send the bullet off in the right direction	
+		}
 	}
 }
 
@@ -103,4 +110,12 @@ function player_warp(_x, _y){
 		y = _y+newY;
 	}
 	
+}
+
+function get_fuelColour(_hover){
+	// Input a number between 0 and 30 and output a colour code
+	// Find what percent of the way through the fuel we are
+	var percent_done = (_hover/hover_timer); // returns a number from 0-1;
+	var output = make_color_hsv(100 + (150*percent_done), 180,170+(50*percent_done));
+	return output;	
 }

@@ -31,7 +31,7 @@ v_coyote		= 7;		// actual variable timer
 
 // ********** SHOOTING VALUES **********
 maxBullets		= 3;		// maximum number of bullets on screen
-bulletSpeed		= 6;		// speed of the bullet
+bulletSpeed		= 12;		// speed of the bullet
 v_grenades		= 3;		// grenades in your inventory
 grenade_xspeed	= 2;		// ;;
 grenade_yspeed	= -2;		// used to build the grenade trajectory
@@ -41,9 +41,14 @@ grenade_grav	= 0.1;		// ;;
 player_health	= 4;		// player health
 gun_damage		= 0;		// flags for gun upgrades 0-1-2
 gun_boost		= false;	// flag for gun boost upgrade
+can_gunboost	= false;	// flag for being able to gun boost
 hover_upgrade	= false;	// flag for hover upgrade
 teleport_upgrade= false;	// flag for teleport upgrade
 hover_timer		= 30;		// time to spend hovering
 _hover_timer	= hover_timer; // actuall variable for hvoering
 
+// ********** MISC VARIABLES **********
+spriteLock		= 0;		// used to "lock" the current sprite
+
+jetpack= instance_create_depth(x,y,depth+1,oJetpack); // initialise the jetpack
 camera = instance_create_depth(x,y,depth,oCamera); // Initialise the camera

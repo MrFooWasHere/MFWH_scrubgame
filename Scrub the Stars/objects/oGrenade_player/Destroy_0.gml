@@ -13,4 +13,5 @@ if _num > 0 {
 }
 ds_list_destroy(_list);
 
-// TODO: Play the explosion animation
+// Play the explosion animation
+instance_create_depth(x,y,depth,oGrenade_explosion);

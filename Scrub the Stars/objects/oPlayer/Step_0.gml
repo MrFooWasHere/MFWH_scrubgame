@@ -38,6 +38,7 @@ if onGround{
 	v_yspeed = 0; // stop falling when on the ground
 	v_coyote = coyoteTimer; // reset the coyote timer 
 	_hover_timer = hover_timer; // reset hover timer
+	if gun_boost then can_gunboost = true; // reset gun boost power
 } else{
 	// reduce coyoteTimer
 	v_coyote --;
@@ -46,10 +47,14 @@ if onGround{
 	if fallDir = -1 then v_yspeed += c_gravity else v_yspeed += c_gravity*1.5; // gravity effects
 	v_yspeed = clamp(v_yspeed, fallSpeed*-50,fallSpeed); // clamp so you don't fall at the speed of sound
 	// hovering
-	if hover_upgrade && v_yspeed > 0 then{
+	if hover_upgrade && v_yspeed > 0 && v_coyote <= 0 then{
 		if inputHover && _hover_timer > 0{
 				v_yspeed = 0;
 				_hover_timer --;
+				jetpack.active = true;
+				jetpack.fuel_colour = get_fuelColour(_hover_timer);
+		} else{
+			jetpack.active = false;	
 		}
 	}
 }
@@ -63,15 +68,17 @@ if inputJump && (onGround || v_coyote > 0) then {
 
 #region ********** SHOOTING CODE **********
 if inputShoot{
-	if !onGround && inputDown && gun_boost then{
+	if !onGround && inputDown && can_gunboost then{
 		// do a gun boost
-		if instance_number(oBullet_player) < 3 then{
-			v_yspeed = 0;
-			player_jump(0.75);
-		}
+		v_yspeed = 0;
+		player_jump(0.75);
+		sprite_index = s_pShootDown;
+		spriteLock = 20;
+		player_shoot(true);
+		can_gunboost = false;
 		// TODO ADD A FLAG THAT CHANGES THE SPRITE HERE
 	} else{
-		player_shoot();	
+		player_shoot(false);	
 	}
 }
 
@@ -116,12 +123,7 @@ y = newY;
 
 #region ********** DUCKING **********
 
-if inputDown {
-	if moveInput = 0 && onGround then{
-		// Duck
-		mask_index = s_pDuckMask;
-	}
-} else{
+if sprite_index != s_pDuck {
 	mask_index = s_pMask;	
 }
 
@@ -173,17 +175,28 @@ if ( onGround || camYdist > 50 ){
 #region ********** MISC COLLISSIONS **********
 
 if place_meeting(x,y,oWarp){
-	game_end();	
+	// go to next room
+	// TODO change this value based on the room
+	//trans_fade(testRoom2);
+	game_restart();
 }
 
 #endregion
 
 #region ********** SPRITE CONTROL **********
-
-if onGround{
-		if abs(v_xspeed) > 0.5 then sprite_index = s_pWalk else sprite_index = s_pIdle; 
-} else{
-	sprite_index = s_pJump;	
+if spriteLock > 0 then spriteLock -- else
+{
+	if onGround{
+			if abs(v_xspeed) > 0.5 then sprite_index = s_pWalk else {
+				if inputDown {
+					sprite_index = s_pDuck;
+					mask_index = s_pDuckMask;
+				}
+				else sprite_index = s_pIdle;
+			}
+	} else{
+		sprite_index = s_pJump;	
+	}
 }
 
 #endregion
