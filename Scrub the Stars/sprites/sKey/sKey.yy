@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d8bda107-cb6a-4e62-a9dd-9ab60a4607e3","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "gMisc_Collectables",
-    "path": "folders/Misc/gMisc_Collectables.yy",
+    "name": "gCollectable_Sprites",
+    "path": "folders/Misc/gMisc_Collectables/gCollectable_Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sKey",

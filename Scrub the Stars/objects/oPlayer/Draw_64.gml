@@ -1,4 +1,20 @@
-// Draw HUD Items
+// Draw HUD Items (Inventory)
+// go through each character in the inventory string and draw the corresponding sprite
+var drawnIcons = 0;
+var currentSlot = 1;
+var right_edge = 1280;
+repeat(9){
+	var char = string_char_at(inventory, currentSlot);
+	if char == "1"{
+		// draw the current sprite
+		var thisSprite = global.items[currentSlot];
+		var sw = sprite_get_width(thisSprite)*2.1;
+		draw_sprite_ext(thisSprite, 0, right_edge - sw,24,2,2,0,c_white,1);
+		drawnIcons ++;
+		right_edge -= sw - 8;
+	}
+	currentSlot ++;
+}
 
 // Draw the healthbar
 draw_sprite_ext(sHealthBar,player_health,0,0,2,2,0,c_white,1);
@@ -25,4 +41,3 @@ for (var i = 0; i < ds_list_size(upgrades); i++){
 	draw_sprite_ext(thisupgrade,0,0+(48*i),100,2,2,0,c_white,1);
 }
 ds_list_destroy(upgrades);
-

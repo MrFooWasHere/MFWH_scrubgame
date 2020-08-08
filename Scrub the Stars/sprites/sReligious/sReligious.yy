@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"41479114-1b37-4468-996f-76150e45b521","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "gMisc_Collectables",
-    "path": "folders/Misc/gMisc_Collectables.yy",
+    "name": "gCollectable_Sprites",
+    "path": "folders/Misc/gMisc_Collectables/gCollectable_Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sReligious",

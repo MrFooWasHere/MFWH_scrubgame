@@ -48,6 +48,61 @@ function game_init(){
 	global.keybind_up		= vk_up;
 	
 	#endregion
+	
+	#region ********** SAVE GAME SYSTEM **********
+	global.saveslot = 1;
+	
+	ini_open("save.scrub");
+	
+	// Look for the init key, which tells us the save file has already been made
+	if !ini_section_exists("init") {
+		// it doesn't exist so we have to build the file
+		var i = 1;
+		
+		repeat(3)
+		{
+			var thisSaveSlot = "save_" + string(i); // returns save_1, save_2 or save_3
+			// Build a save file
+			ini_write_real( thisSaveSlot, "save_health", 4);
+			ini_write_real( thisSaveSlot, "save_upgrades", 0);
+			ini_write_real( thisSaveSlot, "save_teleport", 0);
+			ini_write_real( thisSaveSlot, "save_hover", 0);
+			ini_write_real( thisSaveSlot, "save_boost", 0);
+			ini_write_real( thisSaveSlot, "save_scrap", 0);
+			ini_write_real( thisSaveSlot, "save_moon", 0);
+			ini_write_real( thisSaveSlot, "save_win", 0);
+			ini_write_real( thisSaveSlot, "save_percent", 0);
+			ini_write_real( thisSaveSlot, "save_grenades", 0);
+			ini_write_string( thisSaveSlot, "save_inventory", "000000000");
+			ini_write_real( thisSaveSlot+"_scraps", "Scrap ID's", 0);
+			i++;
+		}
+		
+		
+		// confirm it has been made for future boots
+		ini_write_string( "init","init","save initialised");
+	}
+	
+	
+	ini_close();
+	
+	#endregion
+	
+	#region ********** ITEMS **********
+	
+	global.items = array_create(10);
+	global.items[0] = sGameEnder;
+	global.items[1] = sAlcohol;
+	global.items[2] = sBlackBox;
+	global.items[3] = sCriminal;
+	global.items[4] = sFood;
+	global.items[5] = sGems;
+	global.items[6] = sKey;
+	global.items[7] = sPackage;
+	global.items[8] = sPowerRegulator;
+	global.items[9] = sReligious;
+	
+	#endregion
 }
 
 function spawn_spaceShip(_x, _y){
@@ -84,8 +139,5 @@ function setExit(mapenum){
 		}
 }
 	
-function saveGame(_saveslot){
-		
-}
-	
 #macro c_pOrange make_color_rgb(255,74,0)
+#macro savefile "save.scrub"

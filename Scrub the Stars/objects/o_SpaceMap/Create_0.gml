@@ -13,3 +13,5 @@ mapleft		= global.keybind_left;
 mapright	= global.keybind_right;
 mapaccept	= global.keybind_accept;
 mappause	= global.keybind_pause;
+
+load_spaceMap();

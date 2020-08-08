@@ -80,8 +80,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2c3d995e-7291-4da0-a670-ec2f2faabd35","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "gMisc_Collectables",
-    "path": "folders/Misc/gMisc_Collectables.yy",
+    "name": "gCollectable_Sprites",
+    "path": "folders/Misc/gMisc_Collectables/gCollectable_Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sGameEnder",

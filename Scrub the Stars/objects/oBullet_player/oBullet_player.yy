@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Misc",
-    "path": "folders/Misc.yy",
+    "name": "gMisc_Objects",
+    "path": "folders/Misc/gMisc_Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "oBullet_player",

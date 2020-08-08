@@ -187,6 +187,7 @@ if place_meeting(x,y,oWarp){
 	// go to next room
 	// TODO change this value based on the room
 	//trans_fade(testRoom2);
+	save_playerState();
 	game_restart();
 }
 

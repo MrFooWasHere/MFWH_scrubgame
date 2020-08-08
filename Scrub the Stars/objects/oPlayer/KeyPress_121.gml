@@ -19,4 +19,9 @@ switch(get_string("Dev Command", "")){
 		hover_upgrade = true;
 		gun_boost = true;
 		teleport_upgrade = true;
+		break;
+	case "snq":
+		save_playerState();
+		game_restart();
+		break;
 }

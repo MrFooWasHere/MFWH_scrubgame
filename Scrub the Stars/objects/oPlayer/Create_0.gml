@@ -53,6 +53,9 @@ scrap_count		= 0;		// Currency
 // ********** MISC VARIABLES **********
 spriteLock		= 0;		// used to "lock" the current sprite
 invincible		= 0;		// used for invincibility frames
+inventory		= "000000000" // used for storing the inventory
 
 jetpack= instance_create_depth(x,y,depth+1,oJetpack); // initialise the jetpack
 camera = instance_create_depth(x,y,depth,oCamera); // Initialise the camera
+
+load_playerState();
