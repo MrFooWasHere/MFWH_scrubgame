@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "SpaceMap",
-    "path": "folders/SpaceMap.yy",
+    "path": "folders/Episode_I/SpaceMap.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_SpaceShip",

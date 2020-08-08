@@ -36,7 +36,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Environment",
-    "path": "folders/Environment.yy",
+    "path": "folders/Core Assets/Environment.yy",
   },
   "resourceVersion": "1.0",
   "name": "oMovingPlatform",

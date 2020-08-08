@@ -100,8 +100,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "0.0",
-    "path": "folders/0.0.yy",
+    "name": "Dev",
+    "path": "folders/Dev.yy",
   },
   "resourceVersion": "1.0",
   "name": "testRoom",

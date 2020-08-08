@@ -36,7 +36,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Player",
-    "path": "folders/Player.yy",
+    "path": "folders/Core Assets/Player.yy",
   },
   "resourceVersion": "1.0",
   "name": "oPlayer",

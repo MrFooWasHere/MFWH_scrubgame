@@ -42,8 +42,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "0.0",
-    "path": "folders/0.0.yy",
+    "name": "Core Assets",
+    "path": "folders/Core Assets.yy",
   },
   "resourceVersion": "1.0",
   "name": "initialise",

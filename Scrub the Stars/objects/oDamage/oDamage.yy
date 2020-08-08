@@ -22,7 +22,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Hazards",
-    "path": "folders/Hazards.yy",
+    "path": "folders/Core Assets/Hazards.yy",
   },
   "resourceVersion": "1.0",
   "name": "oDamage",

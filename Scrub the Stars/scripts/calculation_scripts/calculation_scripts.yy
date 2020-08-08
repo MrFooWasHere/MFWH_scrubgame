@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scrub the Stars",
-    "path": "Scrub the Stars.yyp",
+    "name": "Core Assets",
+    "path": "folders/Core Assets.yy",
   },
   "resourceVersion": "1.0",
   "name": "calculation_scripts",

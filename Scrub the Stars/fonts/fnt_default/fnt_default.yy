@@ -128,7 +128,7 @@
   "maintainGms1Font": false,
   "parent": {
     "name": "UI_Assets",
-    "path": "folders/UI_Assets.yy",
+    "path": "folders/Core Assets/UI_Assets.yy",
   },
   "resourceVersion": "1.0",
   "name": "fnt_default",
