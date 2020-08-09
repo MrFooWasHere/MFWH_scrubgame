@@ -42,8 +42,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Core Assets",
-    "path": "folders/Core Assets.yy",
+    "name": "Scrub the Stars",
+    "path": "Scrub the Stars.yyp",
   },
   "resourceVersion": "1.0",
   "name": "initialise",

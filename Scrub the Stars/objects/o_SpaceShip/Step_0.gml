@@ -7,13 +7,8 @@ var percent = (goaldist/goalDistance)
 
 if enter{
 	pos = 0.1-(percent/2);
-	if goaldist > goalDistance then{
-		image_xscale = percent;
-		image_yscale = percent;
-	} else{
-		image_xscale = 1;
-		image_yscale = 1;
-	}
+	image_xscale = 2-(percent*2);
+	image_yscale = 2-(percent*2);
 	
 	// pick the sprite
 	switch(global.enterx){
@@ -33,13 +28,8 @@ if enter{
 	}
 } else{
 	pos = (percent/2)-0.4;
-	if goaldist > goalDistance then{
-		image_xscale = 1;
-		image_yscale = 1;
-	} else{
-		image_xscale = percent;
-		image_yscale = percent;
-	}
+	image_xscale = percent*2;
+	image_yscale = percent*2;
 	
 	switch(global.exitx){
 		case map_location.space_station_x:

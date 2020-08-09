@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "gMisc_Collectables",
-    "path": "folders/Misc/gMisc_Collectables.yy",
+    "path": "folders/Core Assets/Misc/gMisc_Collectables.yy",
   },
   "resourceVersion": "1.0",
   "name": "oScrap",

@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "gPlayer_UI",
-    "path": "folders/Player/gPlayer_UI.yy",
+    "path": "folders/Core Assets/Player/gPlayer_UI.yy",
   },
   "resourceVersion": "1.0",
   "name": "sUpgrade_Teleport",

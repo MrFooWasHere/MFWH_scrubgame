@@ -5,8 +5,9 @@ function damage_player(){
 	invincible = 30;
 	v_xspeed = 0;
 	// ********** GAME OVER **********
-	if player_health <= 0 then {
-		game_restart();
+	if player_health <= 0 && !instance_exists(oPlayerDie) then {
+		instance_create_depth(x,y,-9999,oPlayerDie);
+		visible = false;
 	}
 }
 
@@ -117,4 +118,8 @@ function get_fuelColour(_hover){
 	var percent_done = (_hover/hover_timer); // returns a number from 0-1;
 	var output = make_color_hsv(100 + (150*percent_done), 180,170+(50*percent_done));
 	return output;	
+}
+
+function check_moveLock(){
+
 }

@@ -27,7 +27,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Trans Examples",
-    "path": "folders/UI_Assets/transition_effects/transition_objects/Trans Examples.yy",
+    "path": "folders/Core Assets/UI_Assets/transition_effects/transition_objects/Trans Examples.yy",
   },
   "resourceVersion": "1.0",
   "name": "oExampleREADME",

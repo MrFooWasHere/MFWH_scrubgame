@@ -77,7 +77,7 @@
   ],
   "parent": {
     "name": "gMisc_Sprites",
-    "path": "folders/Misc/gMisc_Sprites.yy",
+    "path": "folders/Core Assets/Misc/gMisc_Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_grenade",

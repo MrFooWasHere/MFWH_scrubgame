@@ -81,7 +81,7 @@
   ],
   "parent": {
     "name": "gPlayer_sprites",
-    "path": "folders/Player/gPlayer_sprites.yy",
+    "path": "folders/Core Assets/Player/gPlayer_sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_pWalk",

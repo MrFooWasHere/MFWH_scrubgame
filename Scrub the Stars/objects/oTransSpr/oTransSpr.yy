@@ -34,7 +34,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "transition_objects",
-    "path": "folders/UI_Assets/transition_effects/transition_objects.yy",
+    "path": "folders/Core Assets/UI_Assets/transition_effects/transition_objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "oTransSpr",

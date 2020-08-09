@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 49,
+  "bbox_right": 46,
   "bbox_top": 0,
-  "bbox_bottom": 44,
+  "bbox_bottom": 45,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 50,
-  "height": 45,
+  "width": 47,
+  "height": 46,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c56fe310-d88d-4a12-82ee-c76701d7239b","path":"sprites/SS_Debris/SS_Debris.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c56fe310-d88d-4a12-82ee-c76701d7239b","path":"sprites/SS_Debris/SS_Debris.yy",},"LayerId":{"name":"4a5813a6-e3d4-4879-8001-4c4656ab1af3","path":"sprites/SS_Debris/SS_Debris.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"SS_Debris","path":"sprites/SS_Debris/SS_Debris.yy",},"resourceVersion":"1.0","name":"c56fe310-d88d-4a12-82ee-c76701d7239b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5102efd0-f4b7-4d2d-93fb-eefac1fe0343","path":"sprites/SS_Debris/SS_Debris.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5102efd0-f4b7-4d2d-93fb-eefac1fe0343","path":"sprites/SS_Debris/SS_Debris.yy",},"LayerId":{"name":"4a5813a6-e3d4-4879-8001-4c4656ab1af3","path":"sprites/SS_Debris/SS_Debris.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"SS_Debris","path":"sprites/SS_Debris/SS_Debris.yy",},"resourceVersion":"1.0","name":"5102efd0-f4b7-4d2d-93fb-eefac1fe0343","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"3db449e8-1833-4604-b988-1a9e01632dd3","path":"sprites/SS_Debris/SS_Debris.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"3db449e8-1833-4604-b988-1a9e01632dd3","path":"sprites/SS_Debris/SS_Debris.yy",},"LayerId":{"name":"1c083449-86ba-46c9-b363-fe9eb8b97b38","path":"sprites/SS_Debris/SS_Debris.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"SS_Debris","path":"sprites/SS_Debris/SS_Debris.yy",},"resourceVersion":"1.0","name":"3db449e8-1833-4604-b988-1a9e01632dd3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"afb1b894-25f4-4eba-9598-991b690ce413","path":"sprites/SS_Debris/SS_Debris.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"afb1b894-25f4-4eba-9598-991b690ce413","path":"sprites/SS_Debris/SS_Debris.yy",},"LayerId":{"name":"1c083449-86ba-46c9-b363-fe9eb8b97b38","path":"sprites/SS_Debris/SS_Debris.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"SS_Debris","path":"sprites/SS_Debris/SS_Debris.yy",},"resourceVersion":"1.0","name":"afb1b894-25f4-4eba-9598-991b690ce413","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"SS_Debris","path":"sprites/SS_Debris/SS_Debris.yy",},
@@ -44,8 +44,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"654ab852-6eb5-4426-a579-7fc63348179c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c56fe310-d88d-4a12-82ee-c76701d7239b","path":"sprites/SS_Debris/SS_Debris.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"8c534aa5-f6f2-4986-8701-6d7d0c474cd3","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5102efd0-f4b7-4d2d-93fb-eefac1fe0343","path":"sprites/SS_Debris/SS_Debris.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ec44c7cb-db0e-496b-837d-9b507ca74ca6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3db449e8-1833-4604-b988-1a9e01632dd3","path":"sprites/SS_Debris/SS_Debris.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"703bc6ab-9681-4322-97ad-2c0576f598fb","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"afb1b894-25f4-4eba-9598-991b690ce413","path":"sprites/SS_Debris/SS_Debris.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,8 +58,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 25,
-    "yorigin": 22,
+    "xorigin": 23,
+    "yorigin": 23,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"SS_Debris","path":"sprites/SS_Debris/SS_Debris.yy",},
@@ -69,11 +69,11 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4a5813a6-e3d4-4879-8001-4c4656ab1af3","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1c083449-86ba-46c9-b363-fe9eb8b97b38","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "spaceShip",
-    "path": "folders/SpaceMap/spacemap_Graphics/spaceShip.yy",
+    "path": "folders/Episode_I/SpaceMap/spacemap_Graphics/spaceShip.yy",
   },
   "resourceVersion": "1.0",
   "name": "SS_Debris",

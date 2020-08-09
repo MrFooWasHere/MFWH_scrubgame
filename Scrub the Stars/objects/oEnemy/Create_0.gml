@@ -16,3 +16,5 @@ grav_force = 0.3;
 anchorY = y;
 anchorX = x;
 timer = 0 + random(100);
+
+jump_height = 16;

@@ -24,4 +24,15 @@ switch(get_string("Dev Command", "")){
 		save_playerState();
 		game_restart();
 		break;
+	case "clean":
+		ini_open(savefile);
+		ini_section_delete("save_1");
+		ini_section_delete("save_1_scraps");
+		ini_section_delete("save_2");
+		ini_section_delete("save_2_scraps");
+		ini_section_delete("save_3");
+		ini_section_delete("save_3_scraps");
+		ini_section_delete("init");
+		ini_close();
+		game_restart();
 }

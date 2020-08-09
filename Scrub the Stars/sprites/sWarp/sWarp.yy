@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Masks",
-    "path": "folders/Environment/Masks.yy",
+    "path": "folders/Core Assets/Environment/Masks.yy",
   },
   "resourceVersion": "1.0",
   "name": "sWarp",

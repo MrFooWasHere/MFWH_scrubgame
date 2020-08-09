@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "spacemap_Graphics",
-    "path": "folders/SpaceMap/spacemap_Graphics.yy",
+    "path": "folders/Episode_I/SpaceMap/spacemap_Graphics.yy",
   },
   "resourceVersion": "1.0",
   "name": "bg_spaceMap",

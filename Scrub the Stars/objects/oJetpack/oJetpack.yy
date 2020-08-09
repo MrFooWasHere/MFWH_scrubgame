@@ -26,7 +26,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "gPlayer_scripts",
-    "path": "folders/Player/gPlayer_scripts.yy",
+    "path": "folders/Core Assets/Player/gPlayer_scripts.yy",
   },
   "resourceVersion": "1.0",
   "name": "oJetpack",

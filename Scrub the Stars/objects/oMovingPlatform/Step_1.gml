@@ -1,5 +1,8 @@
-if y < oPlayer.y then{
-	mask_index =-1;	
+if y+8 < oPlayer.y && y+8 < oPlayer.yprevious then{
+	sprite_index =-1;	
 } else{
-	mask_index = sBlock;	
+	sprite_index = sBlock;	
+	if place_meeting(x,y,oPlayer){
+		sprite_index =-1;	
+	}
 }

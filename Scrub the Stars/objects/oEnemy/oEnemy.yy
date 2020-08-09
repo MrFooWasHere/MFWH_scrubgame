@@ -50,7 +50,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "gEnemies",
-    "path": "folders/Hazards/gEnemies.yy",
+    "path": "folders/Core Assets/Hazards/gEnemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "oEnemy",

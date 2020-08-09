@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "transition_sprites",
-    "path": "folders/UI_Assets/transition_effects/transition_sprites.yy",
+    "path": "folders/Core Assets/UI_Assets/transition_effects/transition_sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "bg_chess",

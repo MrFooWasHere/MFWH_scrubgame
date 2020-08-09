@@ -145,7 +145,7 @@
   ],
   "parent": {
     "name": "explosion_sprites",
-    "path": "folders/Misc/gMisc_Sprites/explosion_sprites.yy",
+    "path": "folders/Core Assets/Misc/gMisc_Sprites/explosion_sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_xplode_1",

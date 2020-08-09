@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "gCollectable_Sprites",
-    "path": "folders/Misc/gMisc_Collectables/gCollectable_Sprites.yy",
+    "path": "folders/Core Assets/Misc/gMisc_Collectables/gCollectable_Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sReligious",

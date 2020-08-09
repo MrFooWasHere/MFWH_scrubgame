@@ -4,11 +4,25 @@
 var inputLeft		= keyboard_check(keyLeft);
 var inputRight		= keyboard_check(keyRight);
 var inputDown		= keyboard_check(keyDown);
+var inputUp			= keyboard_check(keyUp);
 var inputShoot		= keyboard_check_pressed(keyShoot);
 var inputJump		= keyboard_check_pressed(keyJump);
 var inputGrenade	= keyboard_check_pressed(keyGrenade);
-
 var inputHover		= keyboard_check(keyJump);
+
+#region deathLocking
+if visible = false then{
+		inputLeft		= 0;
+		inputRight		= 0;
+		inputDown		= 0;
+		inputUp		= 0;
+		inputShoot		= 0;
+		inputJump		= 0;
+		inputGrenade	= 0;
+		inputHover		= 0;
+		c_gravity = 0; // stop falling
+}
+#endregion
 
 var moveInput = inputRight - inputLeft; // moveInput is 1 when moving and -1 when moving lefts
 
@@ -174,8 +188,9 @@ if invincible > 0 then {
 var camYdist = abs(y - camera.y)
 
 if ( onGround || camYdist > 50 ){
+	var yoffset = inputUp*80;
 	with camera {
-		desiredY = oPlayer.y + cam_ypos;
+		desiredY = oPlayer.y + cam_ypos - yoffset;
 	}
 }
 
@@ -185,10 +200,13 @@ if ( onGround || camYdist > 50 ){
 
 if place_meeting(x,y,oWarp){
 	// go to next room
-	// TODO change this value based on the room
-	//trans_fade(testRoom2);
 	save_playerState();
-	game_restart();
+	trans_fade(room_next(room));
+}
+if place_meeting(x,y,oEndLevel){
+	// go to next room
+	save_playerState();
+	trans_primitive(EP1_SpaceMap,TR_PRIMITIVE_LOS,c_pOrange);
 }
 
 #endregion

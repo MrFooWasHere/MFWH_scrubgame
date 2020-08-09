@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "gHazards_sprites",
-    "path": "folders/Hazards/gHazards/gHazards_sprites.yy",
+    "path": "folders/Core Assets/Hazards/gHazards/gHazards_sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sHazard",

@@ -6,6 +6,7 @@
 keyLeft			= global.keybind_left;
 keyRight		= global.keybind_right;
 keyDown			= global.keybind_down;
+keyUp			= global.keybind_up;
 keyShoot		= global.keybind_shoot;
 keyJump			= global.keybind_jump;
 keyGrenade		= global.keybind_grenade;
@@ -20,7 +21,6 @@ v_xspeed		= 0;		// lateral speed
 acceleration	= 0.4;		// acceleration value
 topSpeed		= 3;		// top speed
 xFriction		= 0.2;		// lateral friction
-v_xcarry		= 0;		// moving platform value
 
 // Longitude Values
 v_yspeed		= 0;		// Vertical speed
@@ -29,7 +29,6 @@ jumpPower		= 5;		// Jump power
 fallSpeed		= 10;		// falling speed
 coyoteTimer		= 7;		// coyote timer
 v_coyote		= 7;		// actual variable timer
-v_ycarry		= 0;		// moving platform value
 
 // ********** SHOOTING VALUES **********
 maxBullets		= 3;		// maximum number of bullets on screen

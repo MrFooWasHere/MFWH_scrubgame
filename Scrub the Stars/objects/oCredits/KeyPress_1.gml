@@ -1,0 +1,1 @@
+trans_spr(rm_MainMenu, sTrans4);

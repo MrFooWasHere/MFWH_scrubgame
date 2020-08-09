@@ -1,0 +1,1 @@
+part_particles_create(stars,x+random_range(-5,5),y+random_range(-5,5),star,20);

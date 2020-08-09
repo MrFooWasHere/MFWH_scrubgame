@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "gHazards",
-    "path": "folders/Hazards/gHazards.yy",
+    "path": "folders/Core Assets/Hazards/gHazards.yy",
   },
   "resourceVersion": "1.0",
   "name": "oHazard",

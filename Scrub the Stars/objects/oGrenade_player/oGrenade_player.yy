@@ -29,7 +29,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "gMisc_Objects",
-    "path": "folders/Misc/gMisc_Objects.yy",
+    "path": "folders/Core Assets/Misc/gMisc_Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "oGrenade_player",
