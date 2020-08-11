@@ -20,15 +20,19 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
-  "properties": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"parent":{"name":"oSwitch","path":"objects/oSwitch/oSwitch.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
+  "properties": [
+    {"varType":0,"value":"-1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"target_door","tags":[],"resourceType":"GMObjectProperty",},
+  ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Environment",
-    "path": "folders/Core Assets/Environment.yy",
+    "name": "Doors",
+    "path": "folders/Core Assets/Environment/Doors.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oEndLevel",
+  "name": "oSwitch",
   "tags": [],
   "resourceType": "GMObject",
 }

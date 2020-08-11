@@ -91,16 +91,22 @@ function game_init(){
 	#region ********** ITEMS **********
 	
 	global.items = array_create(10);
-	global.items[0] = sGameEnder;
-	global.items[1] = sAlcohol;
-	global.items[2] = sBlackBox;
-	global.items[3] = sCriminal;
-	global.items[4] = sFood;
-	global.items[5] = sGems;
-	global.items[6] = sKey;
-	global.items[7] = sPackage;
-	global.items[8] = sPowerRegulator;
-	global.items[9] = sReligious;
+	global.items[0] = sAlcohol;
+	global.items[1] = sBlackBox;
+	global.items[2] = sCriminal;
+	global.items[3] = sFood;
+	global.items[4] = sGems;
+	global.items[5] = sKey;
+	global.items[6] = sPackage;
+	global.items[7] = sPowerRegulator;
+	global.items[8] = sReligious;
+	global.items[9] = sGameEnder;
+	
+	#endregion
+	
+	#region ********** ENABLE VIEWS IN LEVEL ROOMS **********
+	
+	room_set_view_enabled(rm_station_1, true);
 	
 	#endregion
 }
@@ -139,5 +145,39 @@ function setExit(mapenum){
 		}
 }
 	
+function gib(_x,_y){
+	var numberofGibs = irandom_range(4,12);
+	repeat(numberofGibs){
+		var thisGib = instance_create_depth(_x,_y,-1,oGib);
+		thisGib.hspeed = random_range(-4,4);
+		thisGib.vspeed = random_range(3,7)*-1;
+	}
+	audio_play_sound(snd_Gib,1,0); // play the gib sound
+}
+
+function wipe_save(_id){
+	var base = "save_" + string(_id);
+	var scr = base + "_scraps";
+	ini_open(savefile);
+	ini_section_delete(base);
+	ini_section_delete(scr);
+	
+	// write the new save file
+	ini_write_real( base, "save_health", 4);
+	ini_write_real( base, "save_upgrades", 0);
+	ini_write_real( base, "save_teleport", 0);
+	ini_write_real( base, "save_hover", 0);
+	ini_write_real( base, "save_boost", 0);
+	ini_write_real( base, "save_scrap", 0);
+	ini_write_real( base, "save_moon", 0);
+	ini_write_real( base, "save_win", 0);
+	ini_write_real( base, "save_percent", 0);
+	ini_write_real( base, "save_grenades", 0);
+	ini_write_string( base, "save_inventory", "000000000");
+	ini_write_real( scr, "Scrap ID's", 0);
+	ini_close();
+}
+
+
 #macro c_pOrange make_color_rgb(255,74,0)
 #macro savefile "save.scrub"

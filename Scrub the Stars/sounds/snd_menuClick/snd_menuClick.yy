@@ -13,8 +13,8 @@
   "soundFile": "snd_menuClick.wav",
   "duration": 0.176678,
   "parent": {
-    "name": "SOUNDS",
-    "path": "folders/SOUNDS.yy",
+    "name": "UI_Sounds",
+    "path": "folders/SOUNDS/UI_Sounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_menuClick",

@@ -18,3 +18,7 @@ anchorX = x;
 timer = 0 + random(100);
 
 jump_height = 16;
+
+if behaviour = "path" then{
+	path_start(path,lateral_speed,path_restart,false);	
+}

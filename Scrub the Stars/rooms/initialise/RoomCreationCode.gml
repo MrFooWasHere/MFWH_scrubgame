@@ -1,3 +1,3 @@
 game_init();
 
-trans_fade(room_next(room));
+trans_spr(room_next(room),sTrans4);

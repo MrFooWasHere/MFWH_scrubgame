@@ -23,9 +23,18 @@ switch(current_menu){
 		}
 		break;
 	case menu.newgame:
+		// pick the new saveslot
+		global.saveslot = selection+1;
+		//clean current save slot
+		wipe_save(global.saveslot);
+		trans_spr(rm_Episode_Select,sTrans4);
 		break;
 	case menu.load:
+		// pick the new saveslot
+		global.saveslot = selection+1;
+		trans_spr(rm_Episode_Select,sTrans4);
 		break;
 	case menu.options:
+		//TODO OPTIONS
 		break;
 }

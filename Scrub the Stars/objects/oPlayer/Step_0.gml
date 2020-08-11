@@ -203,7 +203,7 @@ if place_meeting(x,y,oWarp){
 	save_playerState();
 	trans_fade(room_next(room));
 }
-if place_meeting(x,y,oEndLevel){
+if place_meeting(x,y,oWarpEnd){
 	// go to next room
 	save_playerState();
 	trans_primitive(EP1_SpaceMap,TR_PRIMITIVE_LOS,c_pOrange);

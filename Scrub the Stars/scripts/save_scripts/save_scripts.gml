@@ -62,3 +62,23 @@ function load_roomScraps(){
 	}
 	ini_close();
 }
+
+function inventory_add(_id){
+	var saveSection = "save_" + string(global.saveslot); // returns save_1
+	ini_open(savefile);
+	var _old = ini_read_string(saveSection,"save_inventory", "000000000"); // old inventory string
+	var _new = "";
+	// re-write the old string, except _id
+	for (var i = 1; i < 9; i++){
+		if i == _id then{
+			_new += "1"; // this needs to be a 1	
+		} else{
+			_new += string_char_at(_old,i);	 // this is the old one
+		}
+	}
+	// write the new string to the save file
+	ini_write_string(saveSection,"save_inventory", _new);		
+	ini_close();
+	// reload the player state
+	load_playerState();
+}
