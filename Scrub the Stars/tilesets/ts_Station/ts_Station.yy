@@ -1,5 +1,4 @@
 {
-  "name": "ts_Station",
   "spriteId": {
     "name": "sStation",
     "path": "sprites/sStation/sStation.yy",
@@ -254,6 +253,7 @@
     "path": "folders/Episode_I/Levels/Station/graphics.yy",
   },
   "resourceVersion": "1.0",
+  "name": "ts_Station",
   "tags": [],
   "resourceType": "GMTileSet",
 }

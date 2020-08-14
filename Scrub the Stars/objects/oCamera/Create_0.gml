@@ -1,8 +1,8 @@
 /// @description Initialise view camera
 
 // TODO run room_set_view_enabled(room,true) on every room during the init room
-cam_width	= 640;
-cam_height	= 360;
+cam_width	= 480;
+cam_height	= 270;
 cam_xpos	= 64;
 cam_ypos	= -22;
 camSpeed	= 0.08;
